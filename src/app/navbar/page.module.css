@@ -1,0 +1,67 @@
+.dashboard {
+    background-color: aquamarine;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    position: fixed; /* Fixed position at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures the navbar stays on top */
+}
+
+/* Add margin to the content below to avoid overlapping */
+.content {
+    padding-top: 60px; /* Adjust this value to match the height of the navbar */
+    margin-top: 20px;
+    width:min-content 100%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: var(--font-geist-sans);
+    display: flex;
+    align-items: center;
+}
+
+.ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: var(--font-geist-sans);
+    align-items: center;
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+        padding: 10px;
+        height: auto; /* Allows content to wrap in small screens */
+    }
+    .ul {
+        gap: 12px;
+        font-size: 16px;
+    }
+    .logo {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .ul {
+        gap: 10px;
+        font-size: 14px;
+    }
+    .logo {
+        font-size: 18px;
+    }
+}
