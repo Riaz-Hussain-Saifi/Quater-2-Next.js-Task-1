@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './page.module.css';
+import Link from 'next/link';
 
 const Navbar = () => {
   return (
@@ -7,10 +8,10 @@ const Navbar = () => {
     <nav className={styles.dashboard}>
      <div className={styles.logo}>Quater-2 Next.JS Task-1</div>
         <ul className={styles.ul}>
-          <li><a className={styles.a} href="/">Home</a></li>
-          <li><a className={styles.a} href="/about">About</a></li>
-          <li><a className={styles.a} href="/contact">Contact</a></li>
-          <li><a className={styles.a} href="/services">Services</a></li>
+          <Link href="/"><li><a className={styles.a} >Home</a></li></Link>
+          <Link href="/about"><li><a className={styles.a} >About</a></li></Link>
+          <Link href="/contact"><li><a className={styles.a} >Contact</a></li></Link>
+          <Link href="/services"><li><a className={styles.a} >Services</a></li></Link>
         </ul>
      </nav>
 
